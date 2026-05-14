@@ -557,13 +557,15 @@ footer {
 .article-wrap a { color: var(--accent-2); }
 
 /* ───── Reveal animations ───── */
-.has-js .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
-  transition-delay: var(--delay, 0s);
+@media (min-width: 768px) {
+  .has-js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+    transition-delay: var(--delay, 0s);
+  }
+  .has-js .reveal.in { opacity: 1; transform: none; }
 }
-.has-js .reveal.in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
