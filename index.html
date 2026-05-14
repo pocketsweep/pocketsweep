@@ -180,16 +180,32 @@
       <p class="kicker">A look inside</p>
       <h2>Designed for one job.</h2>
     </header>
-    <div class="shots three">
+    <div class="device-tabs reveal">
+      <button class="device-tab active" data-target="iphone-shots">iPhone</button>
+      <button class="device-tab" data-target="ipad-shots">iPad</button>
+    </div>
+
+    <div class="shots three" id="iphone-shots">
       <figure class="shot reveal"><img src="assets/02-onboard-permission.png" alt="Privacy promise screen" /><figcaption>Privacy promise</figcaption></figure>
       <figure class="shot reveal" style="--delay:.06s"><img src="assets/03-home.png" alt="Cleanup home with categories" /><figcaption>Cleanup home</figcaption></figure>
       <figure class="shot reveal" style="--delay:.12s"><img src="assets/07-smart-picks.png" alt="Smart Picks — on-device intelligence" /><figcaption>Smart Picks</figcaption></figure>
-      <figure class="shot reveal" style="--delay:.18s"><img src="assets/08-triage.png" alt="Screenshot triage view" /><figcaption>Screenshot triage</figcaption></figure>
-      <figure class="shot reveal" style="--delay:.24s"><img src="assets/09-lookalike.png" alt="Look-alike sets view" /><figcaption>Look-alike sets</figcaption></figure>
-      <figure class="shot reveal" style="--delay:.30s"><img src="assets/10-protected.png" alt="Protected albums view" /><figcaption>Protected albums</figcaption></figure>
-      <figure class="shot reveal" style="--delay:.36s"><img src="assets/04-stats.png" alt="Stats and achievements" /><figcaption>Streaks &amp; achievements</figcaption></figure>
-      <figure class="shot reveal" style="--delay:.42s"><img src="assets/05-settings.png" alt="Settings privacy section" /><figcaption>Privacy front &amp; centre</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.18s"><img src="assets/11-bursts.png" alt="Burst best-pick view" /><figcaption>Burst best-pick</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.24s"><img src="assets/08-triage.png" alt="Screenshot triage view" /><figcaption>Screenshot triage</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.30s"><img src="assets/09-lookalike.png" alt="Look-alike sets view" /><figcaption>Look-alike sets</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.36s"><img src="assets/10-protected.png" alt="Protected albums view" /><figcaption>Protected albums</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.42s"><img src="assets/04-stats.png" alt="Stats and achievements" /><figcaption>Streaks &amp; achievements</figcaption></figure>
       <figure class="shot reveal" style="--delay:.48s"><img src="assets/06-paywall.png" alt="Paywall pricing" /><figcaption>$9.99 once · $2.99 monthly</figcaption></figure>
+    </div>
+
+    <div class="shots two ipad" id="ipad-shots" hidden>
+      <figure class="shot reveal"><img src="assets/ipad/03-home.png" alt="iPad — Cleanup home" /><figcaption>Cleanup home · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.06s"><img src="assets/ipad/07-smart-picks.png" alt="iPad — Smart Picks" /><figcaption>Smart Picks · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.12s"><img src="assets/ipad/11-bursts.png" alt="iPad — Burst best-pick" /><figcaption>Burst best-pick · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.18s"><img src="assets/ipad/09-lookalike.png" alt="iPad — Look-alikes" /><figcaption>Look-alike sets · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.24s"><img src="assets/ipad/08-triage.png" alt="iPad — Screenshot triage" /><figcaption>Screenshot triage · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.30s"><img src="assets/ipad/10-protected.png" alt="iPad — Protected albums" /><figcaption>Protected albums · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.36s"><img src="assets/ipad/06-paywall.png" alt="iPad — Paywall" /><figcaption>Paywall · iPad</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.42s"><img src="assets/ipad/05-settings.png" alt="iPad — Settings" /><figcaption>Settings · iPad</figcaption></figure>
     </div>
   </section>
 
@@ -309,6 +325,16 @@
     }
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.device-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.target;
+      document.querySelectorAll('.device-tab').forEach(b => b.classList.toggle('active', b === btn));
+      document.querySelectorAll('.gallery .shots').forEach(s => {
+        s.hidden = (s.id !== target);
+      });
+    });
+  });
 })();
 </script>
 
