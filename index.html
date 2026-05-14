@@ -3,160 +3,310 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Pocketsweep — The honest photo cleaner for iPhone</title>
-<meta name="description" content="Swipe to clean your camera roll. $9.99 lifetime. On-device. No tracking. No weekly subscription trap." />
-<meta name="theme-color" content="#0B0E13" />
+<title>Pocketsweep — Swipe to clean your camera roll</title>
+<meta name="description" content="The honest photo cleaner for iPhone. Swipe to delete duplicates, screenshots, and large videos. $9.99 lifetime — no weekly subscription trap. On-device. No tracking." />
+<meta name="theme-color" content="#0A0C12" />
 <meta property="og:title" content="Pocketsweep — Swipe to clean your camera roll" />
-<meta property="og:description" content="$9.99 lifetime. On-device. No tracking." />
+<meta property="og:description" content="$9.99 lifetime · On-device · No tracking." />
 <meta property="og:image" content="assets/03-home.png" />
+<meta property="og:url" content="https://pocketsweep.github.io/pocketsweep/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" href="assets/icon-128.png" />
 <link rel="apple-touch-icon" href="assets/icon.png" />
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add('has-js');</script>
 </head>
 <body>
+
+<div class="bg-mesh" aria-hidden="true"></div>
+
 <header class="nav">
   <a class="brand" href="/">
-    <img class="logo" src="assets/icon-128.png" alt="" width="36" height="36" />
+    <img class="logo" src="assets/icon-128.png" alt="" width="34" height="34" />
     <span class="brand-name">Pocketsweep</span>
   </a>
   <nav class="nav-links">
     <a href="#features">Features</a>
+    <a href="#how">How it works</a>
     <a href="#pricing">Pricing</a>
-    <a href="#privacy">Privacy</a>
-    <a href="privacy.html">Policy</a>
+    <a href="#faq">FAQ</a>
   </nav>
+  <a class="nav-cta" href="#waitlist">Get notified</a>
 </header>
 
 <main>
   <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">iPhone &amp; iPad · iOS 18.6+</p>
-      <h1>Swipe to clean<br/>your camera roll.</h1>
-      <p class="lead">The honest photo cleaner. One swipe per photo. <strong>$9.99 lifetime</strong> — or skip the in-app limit on the App Store.</p>
+    <div class="hero-text reveal">
+      <span class="eyebrow"><span class="pulse"></span> Coming soon · iOS 18.6+</span>
+      <h1>Swipe&nbsp;to&nbsp;clean<br/><span class="grad">your camera roll.</span></h1>
+      <p class="lead">The honest photo cleaner. One swipe per photo. <strong>$9.99 lifetime</strong> — or skip the limit on the App Store.</p>
       <div class="cta-row">
-        <a class="cta primary" href="#waitlist">Join the waitlist</a>
-        <a class="cta ghost" href="#features">See how it works</a>
+        <a class="cta primary" href="#waitlist">Join the waitlist <span class="arrow">→</span></a>
+        <a class="cta ghost" href="#how">See how it works</a>
       </div>
-      <ul class="hero-bullets">
-        <li><span class="dot"></span>On-device only — photos never leave your phone</li>
-        <li><span class="dot"></span>No tracking. No analytics SDKs. No ads.</li>
-        <li><span class="dot"></span>$9.99 once or $2.99/mo — no $4.99/week trap</li>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 2 L4 6 V12 C4 17 8 21 12 22 C16 21 20 17 20 12 V6 Z" stroke-linejoin="round"/></svg> On-device only</li>
+        <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 12 L9 18 L21 6" stroke-linecap="round" stroke-linejoin="round"/></svg> No tracking</li>
+        <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 6 V12 L16 14" stroke-linecap="round"/></svg> No weekly trap</li>
       </ul>
     </div>
-    <div class="hero-shot">
-      <div class="phone">
-        <img src="assets/01-onboard-welcome.png" alt="Pocketsweep onboarding — swipe a sample photo to delete or keep" />
+    <div class="hero-stage reveal" style="--delay: .1s">
+      <div class="glow"></div>
+      <div class="device">
+        <div class="device-screen">
+          <img src="assets/01-onboard-welcome.png" alt="Pocketsweep onboarding — swipe sample photo" />
+        </div>
+        <div class="device-notch"></div>
+      </div>
+      <div class="float-chip chip-left">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FF5C5C" stroke-width="2.5"><path d="M6 6 L18 18 M18 6 L6 18" stroke-linecap="round"/></svg>
+        <span>Delete</span>
+      </div>
+      <div class="float-chip chip-right">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#46D27B" stroke-width="2.8"><path d="M5 12 L10 17 L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Keep</span>
       </div>
     </div>
   </section>
 
-  <section class="banner">
-    <p>Most photo cleaners charge <strong>$4.99/week ($259/yr)</strong>. Pocketsweep is <strong>$9.99 once</strong>.</p>
+  <section class="logos reveal">
+    <p>Built with</p>
+    <div class="logo-row">
+      <span>SwiftUI</span>
+      <span>Vision</span>
+      <span>Foundation Models</span>
+      <span>StoreKit&nbsp;2</span>
+      <span>PhotoKit</span>
+    </div>
+  </section>
+
+  <section id="how" class="how">
+    <header class="section-head reveal">
+      <p class="kicker">How it works</p>
+      <h2>Three steps. <span class="text-dim">That's it.</span></h2>
+    </header>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>Scan</h3>
+        <p>Apple's Vision framework groups duplicates, look-alikes, and bursts — locally, in seconds.</p>
+      </div>
+      <div class="step reveal" style="--delay:.1s">
+        <span class="num">02</span>
+        <h3>Swipe</h3>
+        <p>Left to delete. Right to keep. Reason chips tell you why each photo is in the pile.</p>
+      </div>
+      <div class="step reveal" style="--delay:.2s">
+        <span class="num">03</span>
+        <h3>Free space</h3>
+        <p>Confirm once. iOS sends to Recently Deleted for 30 days. Watch the freed bytes add up.</p>
+      </div>
+    </div>
   </section>
 
   <section id="features" class="features">
-    <h2>What it does</h2>
-    <div class="grid">
-      <article>
-        <h3>Tinder for photos</h3>
-        <p>Left to delete. Right to keep. iOS confirms before anything is removed.</p>
+    <header class="section-head reveal">
+      <p class="kicker">Built right</p>
+      <h2>Everything you need.<br/><span class="text-dim">Nothing you don't.</span></h2>
+    </header>
+    <div class="feature-grid">
+      <article class="feature reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="14" height="16" rx="2"/><path d="M7 5 V3 H13 V5 M17 9 L21 9 V19 H17 Z"/></svg></div>
+        <h3>Duplicate detection</h3>
+        <p>Vision feature prints group near-identical frames — re-saved, edited, shared screenshots.</p>
       </article>
-      <article>
-        <h3>Find the duplicates</h3>
-        <p>Apple's Vision framework groups near-identical frames and visually similar shots — locally.</p>
+      <article class="feature reveal" style="--delay:.05s">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18 L9 13 L13 17 L20 10" stroke-linecap="round"/><circle cx="20" cy="10" r="2"/></svg></div>
+        <h3>Look-alikes</h3>
+        <p>Same-scene multiple takes get grouped together so you pick the keeper without losing it.</p>
       </article>
-      <article>
+      <article class="feature reveal" style="--delay:.1s">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="13" height="13" rx="2"/><rect x="9" y="3" width="11" height="13" rx="2"/></svg></div>
         <h3>Burst best-pick</h3>
-        <p>Pulls the sharpest frame from a burst. Sends the rest to the trash on your call.</p>
+        <p>Sharpest frame surfaces; the rest queue for deletion. Sharpness scored on-device.</p>
       </article>
-      <article>
+      <article class="feature reveal" style="--delay:.15s">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8 H15 M9 12 H15 M9 16 H13" stroke-linecap="round"/></svg></div>
         <h3>Screenshot triage</h3>
-        <p>Smart sorting by Foundation Models — receipts, memes, addresses — all on device.</p>
+        <p>Foundation Models categorise receipts, memes, addresses, codes — all locally on device.</p>
       </article>
-      <article>
+      <article class="feature reveal" style="--delay:.2s">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="6,5 6,19 19,12" stroke-linejoin="round"/></svg></div>
         <h3>Large videos</h3>
-        <p>Surface every video over 100&nbsp;MB. Preview, multi-select, free a gig in seconds.</p>
+        <p>Every clip over 100&nbsp;MB. Preview, multi-select, reclaim a gigabyte in seconds.</p>
       </article>
-      <article>
+      <article class="feature reveal" style="--delay:.25s">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10 V7 a4 4 0 0 1 8 0 V10"/></svg></div>
         <h3>Protected albums</h3>
-        <p>Mark Wedding, Kids, ID Docs off-limits. Pocketsweep never shows them.</p>
+        <p>Mark Wedding, Kids, ID docs off-limits. Pocketsweep never shows them — period.</p>
       </article>
+    </div>
+  </section>
+
+  <section class="versus reveal">
+    <header class="section-head">
+      <p class="kicker">The math</p>
+      <h2>Why pay weekly forever?</h2>
+    </header>
+    <div class="vs-grid">
+      <div class="vs-card bad">
+        <p class="vs-tag">Typical cleaner</p>
+        <p class="vs-price">$4.99<span>/week</span></p>
+        <ul>
+          <li><span class="x">✗</span> $259 a year</li>
+          <li><span class="x">✗</span> Cloud uploads</li>
+          <li><span class="x">✗</span> Analytics SDKs</li>
+          <li><span class="x">✗</span> Locked behind paywall</li>
+        </ul>
+      </div>
+      <div class="vs-arrow" aria-hidden="true">→</div>
+      <div class="vs-card good">
+        <p class="vs-tag">Pocketsweep</p>
+        <p class="vs-price">$9.99<span>once</span></p>
+        <ul>
+          <li><span class="ok">✓</span> Lifetime — pay one time</li>
+          <li><span class="ok">✓</span> On-device · zero servers</li>
+          <li><span class="ok">✓</span> No analytics. No ads.</li>
+          <li><span class="ok">✓</span> Try free first (10 deletes)</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="gallery">
-    <h2>The app</h2>
+    <header class="section-head reveal">
+      <p class="kicker">A look inside</p>
+      <h2>Designed for one job.</h2>
+    </header>
     <div class="shots">
-      <figure><img src="assets/02-onboard-permission.png" alt="Privacy promise screen" /><figcaption>Your photos stay on this phone</figcaption></figure>
-      <figure><img src="assets/03-home.png" alt="Cleanup home with categories" /><figcaption>Ranked categories with thumbnails</figcaption></figure>
-      <figure><img src="assets/04-stats.png" alt="Stats and achievements" /><figcaption>Streaks, freed bytes, achievements</figcaption></figure>
-      <figure><img src="assets/05-settings.png" alt="Settings privacy section" /><figcaption>Privacy front and centre</figcaption></figure>
-      <figure><img src="assets/06-paywall.png" alt="Paywall — $9.99 lifetime or $2.99 monthly" /><figcaption>$9.99 lifetime · $2.99 monthly</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/02-onboard-permission.png" alt="Privacy promise screen" /><figcaption>Privacy promise</figcaption></figure>
+      <figure class="shot reveal hero-shot" style="--delay:.08s"><img src="assets/03-home.png" alt="Cleanup home with categories" /><figcaption>Categories ranked by space-per-tap</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.16s"><img src="assets/04-stats.png" alt="Stats and achievements" /><figcaption>Streaks &amp; achievements</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.24s"><img src="assets/05-settings.png" alt="Settings privacy section" /><figcaption>Privacy front &amp; centre</figcaption></figure>
+      <figure class="shot reveal" style="--delay:.32s"><img src="assets/06-paywall.png" alt="Paywall pricing" /><figcaption>$9.99 once · $2.99 monthly</figcaption></figure>
     </div>
   </section>
 
   <section id="pricing" class="pricing">
-    <h2>Pricing</h2>
+    <header class="section-head reveal">
+      <p class="kicker">Pricing</p>
+      <h2>One fair price.</h2>
+    </header>
     <div class="plans">
-      <div class="plan best">
-        <p class="tag">Best value</p>
+      <div class="plan reveal">
+        <h3>Free tier</h3>
+        <p class="price">10<span>&nbsp;deletes</span></p>
+        <p class="plan-note">Lifetime. Try the swipe before paying.</p>
+        <ul>
+          <li>No card, no trial, no nag</li>
+          <li>Same scanner, just capped</li>
+        </ul>
+      </div>
+      <div class="plan best reveal" style="--delay:.08s">
+        <span class="best-tag">Best value</span>
         <h3>Lifetime</h3>
-        <p class="price">$9.99 <span>once</span></p>
+        <p class="price">$9.99<span>&nbsp;once</span></p>
+        <p class="plan-note">One payment. All future updates.</p>
         <ul>
           <li>Unlimited swipes &amp; deletes</li>
-          <li>All future updates</li>
           <li>Family Sharing eligible</li>
+          <li>Pays for itself the first sweep</li>
         </ul>
       </div>
-      <div class="plan">
+      <div class="plan reveal" style="--delay:.16s">
         <h3>Monthly</h3>
-        <p class="price">$2.99 <span>/ month</span></p>
+        <p class="price">$2.99<span>&nbsp;/&nbsp;mo</span></p>
+        <p class="plan-note">For people who hate one-time fees.</p>
         <ul>
           <li>Cancel anytime</li>
-          <li>For people who hate one-time fees</li>
-        </ul>
-      </div>
-      <div class="plan">
-        <h3>Free tier</h3>
-        <p class="price">10 deletes <span>lifetime</span></p>
-        <ul>
-          <li>Try the swipe before paying</li>
-          <li>No card, no trial, no nag</li>
+          <li>Pause whenever</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="privacy" class="privacy">
-    <h2>Privacy is the product</h2>
+    <header class="section-head reveal">
+      <p class="kicker">Privacy</p>
+      <h2>Privacy <span class="text-dim">is the product.</span></h2>
+    </header>
     <div class="privacy-grid">
-      <div>
+      <div class="reveal">
+        <div class="priv-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L4 6 V12 C4 17 8 21 12 22 C16 21 20 17 20 12 V6 Z" stroke-linejoin="round"/><path d="M9 12 L11 14 L15 10" stroke-linecap="round"/></svg></div>
         <h3>On-device only</h3>
-        <p>Vision feature prints, OCR text, similarity groups — all computed locally. Nothing is uploaded.</p>
+        <p>Vision feature prints, OCR text, similarity groups — all computed locally. Nothing leaves the phone.</p>
       </div>
-      <div>
+      <div class="reveal" style="--delay:.08s">
+        <div class="priv-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5 5 L19 19" stroke-linecap="round"/></svg></div>
         <h3>No tracking</h3>
-        <p>No Mixpanel, Amplitude, Firebase, Segment, or Facebook SDK. No analytics. No ad networks.</p>
+        <p>No Mixpanel, Amplitude, Firebase, Segment, Facebook SDK. No analytics. No ad networks. None.</p>
       </div>
-      <div>
+      <div class="reveal" style="--delay:.16s">
+        <div class="priv-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="3.5"/><path d="M5 20 a7 7 0 0 1 14 0" stroke-linecap="round"/></svg></div>
         <h3>No account</h3>
-        <p>No login. No email. RevenueCat handles purchase state with an anonymous ID — not your Apple ID.</p>
+        <p>No login. No email. RevenueCat handles purchase state with an anonymous ID — not your Apple&nbsp;ID.</p>
       </div>
     </div>
-    <p class="note"><a href="privacy.html">Read the full privacy policy →</a></p>
+    <p class="privacy-link"><a href="privacy.html">Read the full privacy policy →</a></p>
   </section>
 
-  <section id="waitlist" class="cta-block">
+  <section id="faq" class="faq">
+    <header class="section-head reveal">
+      <p class="kicker">FAQ</p>
+      <h2>Honest answers.</h2>
+    </header>
+    <div class="faq-list">
+      <details class="reveal"><summary>Does Pocketsweep upload my photos?</summary><p>No. Every scan, feature print, OCR pass, and similarity comparison happens on the device. There is no server backend.</p></details>
+      <details class="reveal" style="--delay:.05s"><summary>What happens when I "delete" a photo?</summary><p>iOS shows its own confirmation, then moves the photo to Recently Deleted for 30 days. Pocketsweep never bypasses this. You can recover anything for a month.</p></details>
+      <details class="reveal" style="--delay:.1s"><summary>Is the free tier actually usable?</summary><p>Yes. 10 lifetime deletes with the full scanner unlocked. Most people figure out within those 10 if the app feels right.</p></details>
+      <details class="reveal" style="--delay:.15s"><summary>Why $9.99 lifetime when others charge $4.99/week?</summary><p>Because the work is done in a single sweep. Charging weekly forever for a one-time job is the trap. Pay once, own it.</p></details>
+      <details class="reveal" style="--delay:.2s"><summary>What languages is it in?</summary><p>16 fully translated locales today (Spanish, French, German, Italian, Brazilian Portuguese, Japanese, Mandarin, Cantonese, Korean, Arabic, Russian, Hindi, Turkish, Dutch, Polish, Indonesian) — plus 24 more falling back to English as we ship translations.</p></details>
+      <details class="reveal" style="--delay:.25s"><summary>Does it work on iPad?</summary><p>Yes. Native iPad layout, not a blown-up iPhone window.</p></details>
+    </div>
+  </section>
+
+  <section id="waitlist" class="cta-block reveal">
+    <p class="kicker">Coming soon</p>
     <h2>Built by one developer.</h2>
-    <p>Pocketsweep is heading to the App Store. Drop a star on GitHub, or wait for the link.</p>
-    <a class="cta primary big" href="https://github.com/pocketsweep">github.com/pocketsweep</a>
+    <p class="lead">Pocketsweep is heading to the App Store. Star the repo or follow along.</p>
+    <div class="cta-row centered">
+      <a class="cta primary big" href="https://github.com/pocketsweep/pocketsweep">★ Star on GitHub</a>
+      <a class="cta ghost big" href="privacy.html">Read privacy</a>
+    </div>
   </section>
 </main>
 
 <footer>
-  <p>© 2026 Pocketsweep · <a href="privacy.html">Privacy</a> · <a href="https://github.com/pocketsweep">GitHub</a></p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/icon-128.png" alt="" width="28" height="28" />
+      <span>Pocketsweep</span>
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/pocketsweep">GitHub</a>
+    </nav>
+  </div>
+  <p class="copyright">© 2026 Pocketsweep · Built by one developer.</p>
 </footer>
+
+<script>
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+</script>
 
 </body>
 </html>
