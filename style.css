@@ -390,6 +390,13 @@ h2 {
   gap: 14px;
   align-items: end;
 }
+.shots.three {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+  align-items: stretch;
+}
 .shot {
   margin: 0;
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
